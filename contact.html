@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ElectroSim - Întreprindere Simulată</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+  <div id="preloader">
+    <div class="spinner"></div>
+  </div>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="logo">
+        <img src="logos.png" alt="ElectroConsult Logo">
+      </h1>
+      <div class="nav-controls" style="display:flex; align-items:center; flex-direction: row-reverse; margin-left:auto;">
+        <button id="darkModeToggle" title="Comută tema" style="margin-left: 1rem;">🌙</button>
+        <nav class="main-nav">
+          <ul>
+            <li><a href="index.html">Acasă</a></li>
+            <li><a href="despre.html">Despre</a></li>
+            <li><a href="servicii.html">Servicii</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+  
+  <section class="hero-image-section">
+    <div class="container">
+      <h1>Contactează-ne</h1>
+      <p>Simulează o colaborare cu echipa noastră sau cere o ofertă educațională.</p>
+      <a href="#questionnaire" class="btn-primary">Trimite un mesaj</a>
+    </div>
+  </section>
+
+  <section class="contact-page">
+    <div class="container">
+      <div class="contact-info">
+        <div class="meet-us">
+          <h2>Ne găsești aici</h2>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2721.233399290227!2d27.589897976030206!3d47.153136371145695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40cafb9aaff7f4c9%3A0x82f5f69b3e82c050!2sFacultatea%20de%20Inginerie%20Electric%C4%83%2C%20Energetic%C4%83%20%C8%99i%20Informatic%C4%83%20Aplicat%C4%83!5e0!3m2!1sro!2sro!4v1722097100000!5m2!1sro!2sro" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <p>📞 0740 000 000</p>
+          <p>✉️ electroconsultgroup@gmail.com</p>
+          <p>📍 Bulevardul Profesor Dimitrie Mangeron 21-23, Iași</p>
+        </div>
+      </div>
+      <div class="contact-form-container" id="questionnaire">
+        <h2>Trimite-ne un mesaj</h2>
+        <form class="contact-form" action="https://docs.google.com/forms/d/e/FORM_ID/formResponse" method="POST" target="_blank">
+          <div class="form-group">
+            <input type="text" name="entry.1234567890" placeholder="Nume" required>
+          </div>
+          <div class="form-group">
+            <input type="email" name="entry.0987654321" placeholder="Email" required>
+          </div>
+          <div class="form-group">
+            <textarea name="entry.1122334455" rows="5" placeholder="Mesajul tău..." required></textarea>
+          </div>
+          <button type="submit" class="btn-primary">Trimite</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section id="parteneri" class="partners-section" data-aos="fade-up">
+    <div class="container">
+      <h2>Partenerii noștri</h2>
+      <div class="partners-logos">
+        <img src="ghaslog.png" alt="Universitatea tehnica Gheorghe Asachi din Iasi">
+        <img src="logotu.png" alt="TUIasi">
+        <img src="ieeia.png" alt="Facultatea de Inginerie Energetică și Informatică Aplicată, Universitatea Tehnică Gheorghe Asachi, Iași">
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 ElectroConsult Group. Toate drepturile rezervate.</p>
+      <div class="social-icons">
+        <a href="https://facebook.com/electrosim" target="_blank" aria-label="Facebook">
+          <img src="https://img.icons8.com/ios-filled/30/ffffff/facebook-new.png" alt="Facebook">
+        </a>
+        <a href="https://instagram.com/electrosim" target="_blank" aria-label="Instagram">
+          <img src="https://img.icons8.com/ios-filled/30/ffffff/instagram-new.png" alt="Instagram">
+        </a>
+        <a href="https://linkedin.com/company/electrosim" target="_blank" aria-label="LinkedIn">
+          <img src="https://img.icons8.com/ios-filled/30/ffffff/linkedin.png" alt="LinkedIn">
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('darkModeToggle');
+    const body = document.body;
+    const systemPrefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const isDark = localStorage.getItem('darkMode') === null ? systemPrefersDark : localStorage.getItem('darkMode') === 'true';
+    if (isDark) {
+      body.classList.add('dark');
+      toggle.textContent = '☀️';
+    }
+
+    toggle.onclick = () => {
+      body.classList.toggle('dark');
+      const isNowDark = body.classList.contains('dark');
+      toggle.textContent = isNowDark ? '☀️' : '🌙';
+      localStorage.setItem('darkMode', isNowDark);
+    };
+    const toTop = document.getElementById("toTop");
+    window.onscroll = () => {
+      toTop.style.display = window.scrollY > 300 ? "block" : "none";
+    };
+    toTop.onclick = () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+    // Închide meniul mobil după selectarea unei opțiuni
+    document.querySelectorAll('.main-nav ul li a').forEach(link => {
+      link.addEventListener('click', () => {
+        const nav = document.querySelector('.main-nav');
+        if (nav.classList.contains('active')) {
+          nav.classList.remove('active');
+        }
+      });
+    });
+  </script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>

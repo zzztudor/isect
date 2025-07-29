@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Servicii - ElectroSim</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="logo">
+        <img src="logos.png" alt="ElectroConsult Logo">
+      </h1>
+      <div class="nav-controls" style="display:flex; align-items:center; flex-direction: row-reverse; margin-left:auto;">
+        <button id="darkModeToggle" title="Comută tema" style="margin-left: 1rem;">🌙</button>
+        <nav class="main-nav">
+          <ul>
+            <li><a href="index.html">Acasă</a></li>
+            <li><a href="despre.html">Despre</a></li>
+            <li><a href="servicii.html">Servicii</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero-image-section" data-aos="fade-up" style="position:relative;background-image:url('bg-hero-electrosim.jpg');background-size:cover;background-position:center;padding:8rem 1rem 8rem 1rem;color:white;min-height:400px;">
+    <div style="position:absolute;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.15);z-index:0;"></div>
+    <div class="container" style="position:relative;z-index:1;">
+      <h2>Ce oferim</h2>
+      <p style="font-size: 1.2rem;">Fiecare serviciu este simulat ca într-o firmă reală, cu accent pe calitate și învățare practică.</p>
+    </div>
+  </section>
+  <section class="services-section" data-aos="fade-up">
+    <div class="container">
+
+    <div class="service-cards">
+      <div class="service-card">
+        <img src="https://img.icons8.com/ios-filled/50/000000/electrical--v1.png" alt="Instalații">
+        <h3>Instalații electrice</h3>
+        <p>Realizăm simulări de montaj complet: tablouri, iluminat, prize, protecții.</p>
+      </div>
+      <div class="service-card">
+        <img src="https://img.icons8.com/ios-filled/50/000000/settings.png" alt="Mentenanță">
+        <h3>Mentenanță preventivă</h3>
+        <p>Verificăm periodic instalațiile simulate și remediem defecțiuni fictive.</p>
+      </div>
+      <div class="service-card">
+        <img src="https://img.icons8.com/ios-filled/50/000000/blueprint.png" alt="Proiectare">
+        <h3>Proiectare electrică</h3>
+        <p>Elaborăm scheme și planuri pentru construcții industriale și civile.</p>
+      </div>
+      <div class="service-card">
+        <img src="https://img.icons8.com/ios-filled/50/000000/inspection.png" alt="Audit">
+        <h3>Audit tehnic</h3>
+        <p>Simulăm evaluări de siguranță conform normativelor actuale.</p>
+      </div>
+      <div class="service-card">
+        <img src="https://img.icons8.com/ios-filled/50/000000/training.png" alt="Training">
+        <h3>Training intern</h3>
+        <p>Instruim echipa pe scenarii reale: softuri CAD, ERP, siguranță electrică.</p>
+      </div>
+    </div>
+  </div>
+  </section>
+
+  <section id="parteneri" class="partners-section" data-aos="fade-up">
+    <div class="container">
+      <h2>Partenerii noștri</h2>
+      <div class="partners-logos">
+        <img src="ghaslog.png" alt="Universitatea tehnica Gheorghe Asachi din Iasi">
+        <img src="logotu.png"alt="TUIasi">
+        <img src="ieeia.png" alt="Facultatea de Inginerie Energetică și Informatică Aplicată, Universitatea Tehnică Gheorghe Asachi din Iași">
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 ElectroSim. Toate drepturile rezervate.</p>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+  AOS.init();
+
+  const toggle = document.getElementById('darkModeToggle');
+  const body = document.body;
+  const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const savedMode = localStorage.getItem('darkMode');
+  const isDark = savedMode ? savedMode === 'true' : prefersDark;
+
+  if (isDark) {
+    body.classList.add('dark');
+    toggle.textContent = '☀️';
+  } else {
+    toggle.textContent = '🌙';
+  }
+
+  toggle.onclick = () => {
+    body.classList.toggle('dark');
+    const nowDark = body.classList.contains('dark');
+    toggle.textContent = nowDark ? '☀️' : '🌙';
+    localStorage.setItem('darkMode', nowDark);
+  };
+</script>
+</body>
+</html>

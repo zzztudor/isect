@@ -1,0 +1,81 @@
+/* Root variables */
+:root {
+  --primary-color: #f7c331;
+  --secondary-color: #000000;
+  --text-color: #ffffff;
+  --spacing: 1rem;
+  --font-main: 'Poppins', sans-serif;
+}
+
+/* Reset and base styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-main);
+  background-color: #f9f9f9;
+  color: var(--secondary-color);
+}
+
+/* Container for layout */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing);
+}
+
+/* Header styles */
+.main-header {
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  padding: var(--spacing) 0;
+}
+
+.main-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.8rem;
+  color: var(--primary-color);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.navbar a:hover {
+  color: var(--primary-color);
+}
+
+/* Footer styles */
+.main-footer {
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  text-align: center;
+  padding: var(--spacing);
+  margin-top: 2rem;
+}
+
+.partners {
+  margin-top: 1rem;
+}
+
+.partners img {
+  max-height: 50px;
+  margin: 0 1rem;
+}
