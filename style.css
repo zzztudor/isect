@@ -517,3 +517,40 @@ body.dark .service-card p {
 .team-slider-wrapper .scroll-btn {
   display: none;
 }
+/* === NAV TOGGLE (Mobile menu burger) === */
+.nav-toggle {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: block;
+    margin-left: 1rem;
+  }
+
+  .main-nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #002d72;
+    z-index: 999;
+    padding: 1rem 0;
+  }
+
+  .main-nav.active {
+    display: block;
+  }
+
+  .main-nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+  }
+}

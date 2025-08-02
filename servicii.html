@@ -16,6 +16,7 @@
       </h1>
       <div class="nav-controls" style="display:flex; align-items:center; flex-direction: row-reverse; margin-left:auto;">
         <button id="darkModeToggle" title="Comută tema" style="margin-left: 1rem;">🌙</button>
+        <button class="nav-toggle" id="menuToggle" title="Meniu">&#9776;</button>
         <nav class="main-nav">
           <ul>
             <li><a href="index.html">Acasă</a></li>
@@ -113,5 +114,15 @@
     localStorage.setItem('darkMode', nowDark);
   };
 </script>
+  <script>
+    const menuToggle = document.getElementById("menuToggle");
+    const mainNav = document.querySelector(".main-nav");
+
+    if (menuToggle) {
+      menuToggle.addEventListener("click", () => {
+        mainNav.classList.toggle("active");
+      });
+    }
+  </script>
 </body>
 </html>
