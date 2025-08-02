@@ -31,8 +31,13 @@
     </div>
   </header>
   
-  <section class="hero-image-section">
-    <div class="container">
+  <section class="hero-image-section" style="position:relative; padding:8rem 1rem; color:white; min-height:400px;">
+    <video autoplay muted loop playsinline style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;z-index:0;">
+      <source src="bec.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div style="position:absolute;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.3);z-index:1;"></div>
+    <div class="container" style="position:relative;z-index:2;">
       <h1>Contactează-ne</h1>
       <p>Scrie-ne și îți oferim soluția potrivită.</p>
       <a href="#questionnaire" class="btn-primary">Trimite un mesaj</a>

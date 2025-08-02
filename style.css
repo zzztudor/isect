@@ -100,28 +100,6 @@ body.dark h2 {
 }
 
 /* === HERO IMAGE SECTION === */
-.hero-image-section {
-  position: relative;
-  background-image: url('bec.mp4');
-  background-size: cover;
-  background-position: center;
-  padding: 8rem 1rem;
-  color: white;
-  min-height: 400px;
-  display: flex;
-  align-items: center;
-}
-.hero-image-section .container {
-  position: relative;
-  z-index: 1;
-}
-.hero-image-section::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(0,0,0,0.3);
-  z-index: 0;
-}
 
 /* === HEADER === */
 .site-header {
