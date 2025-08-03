@@ -38,7 +38,7 @@
       <source src="bec.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
-    <div style="position:absolute;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.3);z-index:1;"></div>
+    <div style="position:absolute;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.55);z-index:1;"></div>
     <div class="container" style="position:relative;z-index:2;">
       <h1>Gândim soluții. Instalăm încredere.</h1>
       <p>
@@ -82,7 +82,15 @@
     <div class="container">
       <div class="contact-info">
         <h2>Ne găsești aici</h2>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2721.233399290227!2d27.589897976030206!3d47.153136371145695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40cafb9aaff7f4c9%3A0x82f5f69b3e82c050!2sFacultatea%20de%20Inginerie%20Electric%C4%83%2C%20Energetic%C4%83%20%C8%99i%20Informatic%C4%83%20Aplicat%C4%83!5e0!3m2!1sro!2sro!4v1722097100000!5m2!1sro!2sro" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2722.793925145267!2d27.591825476697295!3d47.15331772171148!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40cafb9f9a55793d%3A0xb7c6e3b5e5cf9ad6!2sFacultatea%20de%20Inginerie%20Electric%C4%83%2C%20Energetic%C4%83%20%C8%99i%20Informatic%C4%83%20Aplicat%C4%83%2C%20Ia%C8%99i!5e0!3m2!1sro!2sro!4v1693150994451!5m2!1sro!2sro"
+  width="100%"
+  height="400"
+  style="border:0; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.1);"
+  allowfullscreen=""
+  loading="lazy"
+  referrerpolicy="no-referrer-when-downgrade">
+</iframe>
         <div class="meet-us">
           <p>📞 +40-232-278683</p>
           <p>✉️ electroconsultgroup@gmail.com</p>
@@ -154,13 +162,6 @@
         document.head.appendChild(metaTheme);
       }
       metaTheme.content = '#121212';
-
-      const nav = document.querySelector('.main-nav ul');
-      if (isDark) {
-        nav.style.backgroundColor = '#222';
-      } else {
-        nav.style.backgroundColor = '#002d72';
-      }
     }
 
     toggle.onclick = () => {
@@ -178,12 +179,6 @@
       }
       metaTheme.content = isNowDark ? '#121212' : '#f9f9f9';
 
-      const nav = document.querySelector('.main-nav ul');
-      if (isNowDark) {
-        nav.style.backgroundColor = '#222';
-      } else {
-        nav.style.backgroundColor = '#002d72';
-      }
     };
 
     // Închide meniul mobil după selectarea unei opțiuni
@@ -219,6 +214,6 @@
       });
     }
   </script>
-  <button id="toTop" title="Sus">↑</button>
+  </script>
 </body>
 </html>

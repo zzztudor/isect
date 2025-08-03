@@ -554,3 +554,15 @@ body.dark .service-card p {
     gap: 1.2rem;
   }
 }
+
+.hero-image-section h1,
+.hero-image-section p {
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+  color: white;
+}
+
+body.light .hero-image-section h1,
+body.light .hero-image-section p {
+  color: #111;
+  text-shadow: none;
+}
