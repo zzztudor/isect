@@ -355,14 +355,17 @@ body.dark .partners-section {
     gap: 1rem;
   }
 
+  /* 
   .testimonial-cards,
   .partners-logos,
   .gallery-grid {
     flex-direction: column;
     display: flex;
   }
+  */
 }
- @media (max-width: 500px) {
+/* 
+@media (max-width: 500px) {
   .partners-logos {
     flex-direction: column;
     gap: 1.5rem;
@@ -373,6 +376,7 @@ body.dark .partners-section {
     height: auto;
   }
 }
+*/
 /* === SERVICII === */
 .services-section {
   background-color: #f9f9f9;
