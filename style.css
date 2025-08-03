@@ -486,6 +486,13 @@ body.dark .service-card p {
   }
   .main-nav.active {
     display: block;
+  }
+
+  body.light .main-nav.active {
+    background: #002d72;
+  }
+
+  body.dark .main-nav.active {
     background: #1e1e1e;
   }
   .main-nav ul {
@@ -508,6 +515,13 @@ body.dark .service-card p {
   }
   .main-nav.active {
     display: block;
+  }
+
+  body.light .main-nav.active {
+    background: #002d72;
+  }
+
+  body.dark .main-nav.active {
     background: #1e1e1e;
   }
   .main-nav ul {
@@ -550,6 +564,13 @@ body.dark .service-card p {
 
   .main-nav.active {
     display: block;
+  }
+
+  body.light .main-nav.active {
+    background: #002d72;
+  }
+
+  body.dark .main-nav.active {
     background: #1e1e1e;
   }
 
