@@ -486,6 +486,7 @@ body.dark .service-card p {
   }
   .main-nav.active {
     display: block;
+    background: #1e1e1e;
   }
   .main-nav ul {
     flex-direction: column;
@@ -505,7 +506,10 @@ body.dark .service-card p {
     width: 100%;
     background: #002d72;
   }
-  .main-nav.active { display: block; }
+  .main-nav.active {
+    display: block;
+    background: #1e1e1e;
+  }
   .main-nav ul {
     flex-direction: column;
     padding: 1rem;
@@ -546,6 +550,7 @@ body.dark .service-card p {
 
   .main-nav.active {
     display: block;
+    background: #1e1e1e;
   }
 
   .main-nav ul {
