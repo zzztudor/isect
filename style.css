@@ -355,16 +355,15 @@ body.dark .partners-section {
     gap: 1rem;
   }
 
-  /* 
   .testimonial-cards,
   .partners-logos,
   .gallery-grid {
     flex-direction: column;
     display: flex;
+    align-items: center;
   }
-  */
 }
-/* 
+
 @media (max-width: 500px) {
   .partners-logos {
     flex-direction: column;
@@ -375,8 +374,25 @@ body.dark .partners-section {
     max-width: 80%;
     height: auto;
   }
+  .gallery-grid img {
+    max-width: 95vw;
+    height: auto;
+  }
+  .testimonial,
+  .service-card,
+  .team-card {
+    max-width: 95vw;
+    padding: 1rem;
+  }
+  .btn-primary {
+    font-size: 1.1rem;
+    padding: 1rem 2rem;
+  }
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 1.1rem;
+  }
 }
-*/
 /* === SERVICII === */
 .services-section {
   background-color: #f9f9f9;
