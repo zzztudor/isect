@@ -356,23 +356,31 @@ body.dark .partners-section {
   }
 
   .testimonial-cards,
-  .partners-logos,
   .gallery-grid {
     flex-direction: column;
     display: flex;
     align-items: center;
   }
+  .partners-logos {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    justify-content: flex-start;
+    gap: 1rem;
+  }
 }
 
 @media (max-width: 500px) {
   .partners-logos {
-    flex-direction: column;
-    gap: 1.5rem;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    gap: 1rem;
   }
 
   .partners-logos img {
-    max-width: 80%;
-    height: auto;
+    height: 48px;
+    max-width: none;
   }
   .gallery-grid img {
     max-width: 95vw;
@@ -647,4 +655,33 @@ body.light .hero-image-section p {
   .values-section {
     margin-bottom: 3rem;
   }
+}
+
+/* === LAYOUT TUNING: Centering for About & Hero === */
+.about-section .container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 800px;
+  text-align: center;
+}
+.hero-image-section .container {
+  text-align: center;
+}
+.values-section .container,
+.timeline-section .container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 900px;
+}
+
+@media (max-width: 768px) {
+  .values-section .container,
+  .timeline-section .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .partners-logos img { height: 42px; }
 }
