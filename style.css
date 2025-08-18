@@ -232,6 +232,29 @@ body.dark .contact-form textarea {
     opacity: 0.9;
   }
 }
+ form button {
+  all: unset; /* elimină toate stilurile implicite/suprascrise */
+  display: block;
+  margin: 1rem auto 0 auto;
+  padding: 6px 14px;
+  font-size: 14px;
+  background-color: var(--accent-color, #fdd835);
+  color: #000;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: background-color 0.3s, transform 0.1s ease-in-out;
+}
+
+form button:hover {
+  background-color: var(--accent-color-hover, #ffe14d);
+  transform: translateY(-1px);
+}
+
+form button:active {
+  transform: scale(0.96);
+}
 
 /* === BUTTON === */
 .btn-primary {
