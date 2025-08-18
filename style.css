@@ -667,6 +667,10 @@ body.light .hero-image-section p {
     margin-bottom: 3rem;
   }
 }
+ html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
 
 /* === LAYOUT TUNING: Centering for About & Hero === */
 .about-section .container {
